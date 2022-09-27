@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Work+Sans:wght@300;400;500&display=swap');
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: #161747;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+button, input {
+    font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 52px;
+    line-height: 1.2;
+}
+
+p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    background-color: #6AE3FB;
+    border-radius: 20px;
+    border: none;
+    color: #161747;
+    padding: 12px 24px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+.header-section {
+    background-color: #161747;
+    color: white;
+}
+
+.header-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+.header-navigation ul {
+    list-style: none;
+    flex-basis: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content-wrapper {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content-text {
+    flex-basis: 400px;
+}
+
+.header-image-wrapper {
+    flex-basis: 600px;
+}
+
+/* --------------- 4.2 USP's ------------------- */
+
+.usp-section {
+    background-color: white;
+}
+
+.usp-grid {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    margin: 0 20px;
+    padding: 100px 0;
+}
+
+.usp-article {
+    flex-basis: 250px;
+    text-align: center;
+}
+
+.usp-article img {
+    max-width: 50px;
+    margin: 16px 0;
+}
+
+/* --------------- 4.3 Quote ------------------------- */
+
+.quote-section {
+    background-color: #dcdcf4;
+}
+
+.quote-section-content {
+    padding: 100px 0;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* --------------- 4.4 Form ------------------------- */
+
+.form-section {
+    color: white;
+    background-color: #161747;
+}
+
+.form-section-content {
+    padding: 100px 0;
+}
+
+.form-section-content form label {
+    font-size: 12px;
+    margin: 28px 0;
+}
+
+input, textarea {
+    background-color: #202269;
+    border-radius: 16px;
+    width: 100%;
+    border: none;
+    color: #161747;
+    padding: 12px 24px;
+    margin: 8px 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: inherit;
+    color: #c1c1ec;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    .header-content-wrapper {
+        padding: 30px 0 60px 0;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-image-wrapper {
+        flex-basis: auto;
+        margin: 0 0 30px 0;
+        width: 100%;
+    }
+
+    .usp-grid {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
